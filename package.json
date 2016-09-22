@@ -1,6 +1,7 @@
 {
   "name": "oneYearOfYoutubeDigging",
   "version": "0.1.0",
+  "homepage": "http://xavhan.github.io/oneYearOfYoutubeDigging",
   "private": true,
   "devDependencies": {
     "react-scripts": "0.4.3"
