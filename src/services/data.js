@@ -7,15 +7,21 @@ const data = {
   getTracks() {
     return api.get(`/feeds/list/${speadsheetToken}/od6/public/values`, { alt: 'json' })
       .then(response => response.data.feed.entry
-                          .map(line => ({
-                            date: line.gsx$date.$t,
-                            artist: line.gsx$artist.$t,
-                            title: line.gsx$track.$t,
-                            year: line.gsx$year.$t,
-                            genre: line.gsx$genre.$t,
-                            label: line.gsx$label.$t,
-                            link: line.gsx$link,
-                          }))
+                          .map(line => {
+                            const track = {
+                              date: line.gsx$date.$t,
+                              artist: line.gsx$artist.$t,
+                              title: line.gsx$track.$t,
+                              year: line.gsx$year.$t,
+                              genre: line.gsx$genre.$t,
+                              label: line.gsx$label.$t,
+                              ytid: line.gsx$ytid.$t,
+                            };
+                            track.link = track.ytid ?
+                                `https://www.youtube.com/watch?v=${track.ytid}` :
+                                `https://www.youtube.com/results?search_query=${track.artist} ${track.title}`;
+                            return track;
+                          })
       );
   },
 }

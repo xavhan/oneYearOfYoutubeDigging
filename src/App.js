@@ -17,7 +17,11 @@ class App extends Component {
         <ul>
           { this.state.tracks.map((track, i) => (
             <li key={ i }>
-              <strong>{ track.date }</strong> { `${track.title} - ${ track.artist }` }
+              <strong>{ track.date }: </strong>
+              { track.ytid ?
+                (<a href={ track.link } target="_blank">{ `${track.title} - ${ track.artist }` }</a>) :
+                (<span> {track.title + ' - ' + track.artist}  <a href={ track.link } target="_blank">Search</a></span>)
+              }
             </li>
           )) }
         </ul>
