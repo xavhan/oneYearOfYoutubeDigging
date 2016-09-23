@@ -18,8 +18,8 @@ const data = {
                               ytid: line.gsx$ytid.$t,
                             };
                             track.link = track.ytid ?
-                                `https://www.youtube.com/watch?v=${track.ytid}` :
-                                `https://www.youtube.com/results?search_query=${track.artist} ${track.title}`;
+                              `//www.youtube.com/watch?v=${track.ytid}` :
+                              `//www.google.fr/?q=${track.artist} ${track.title}`;
                             return track;
                           })
       );
