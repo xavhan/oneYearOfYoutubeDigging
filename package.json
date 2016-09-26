@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "homepage": "http://xavhan.github.io/oneYearOfYoutubeDigging",
   "private": true,
+  "repository": "xavhan/oneYearOfYoutubeDigging",
+  "author": "Xavier Haniquaut <xavhan@hotmail.com> (https://github.com/xavhan)",
+  "bugs": {
+    "url": "https://github.com/xavhan/oneYearOfYoutubeDigging/issues"
+  },
   "devDependencies": {
     "codecov": "^1.0.1",
-    "react-scripts": "0.4.3",
+    "react-scripts": "0.6.0"
   },
   "dependencies": {
     "apisauce": "^0.5.0",
