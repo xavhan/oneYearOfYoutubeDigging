@@ -4,7 +4,8 @@
   "homepage": "http://xavhan.github.io/oneYearOfYoutubeDigging",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.4.3"
+    "codecov": "^1.0.1",
+    "react-scripts": "0.4.3",
   },
   "dependencies": {
     "apisauce": "^0.5.0",
@@ -18,5 +19,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
